@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 // we need two reducres
 // Song list and Selected song reducers
 
@@ -16,3 +18,8 @@ const selectedSongReducer = (selectedSong = null, action) => {
   }
   return selectedSong;
 };
+
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+});
